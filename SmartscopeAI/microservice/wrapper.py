@@ -8,7 +8,7 @@ import sys
 sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'smartscopeAI')) 
 
 # from ..smartscopeAI.detect_squares import detect
-from ..smartscopeAI.detect_holes import detect_holes_yolo, detect_and_classify_holes
+from ..smartscopeAI.detect_holes import detect_holes_yolo #, detect_and_classify_holes
 
 
 logger = logging.getLogger(__name__)
@@ -132,14 +132,14 @@ def find_squares_from_image(image, class_mapping:Dict=None, success_threshold:in
     
 
 
-def find_and_classify_holes(montage, **kwargs):
-    logger.info('Running AI hole detection and classification')
-    # centroid = find_square_center(montage.image)
-    holes, labels = detect_and_classify_holes(montage.image, **kwargs)
-    # print(holes)
-    success = True
-    if len(holes) < 20:
-        success = False
+# def find_and_classify_holes(montage, **kwargs):
+#     logger.info('Running AI hole detection and classification')
+#     # centroid = find_square_center(montage.image)
+#     holes, labels = detect_and_classify_holes(montage.image, **kwargs)
+#     # print(holes)
+#     success = True
+#     if len(holes) < 20:
+#         success = False
 
-    logger.info(f'AI hole detection found {len(holes)} holes')
-    return (holes, labels), success, 'AIHoleTarget'
+#     logger.info(f'AI hole detection found {len(holes)} holes')
+#     return (holes, labels), success, 'AIHoleTarget'
