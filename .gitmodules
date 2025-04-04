@@ -1,0 +1,4 @@
+[submodule "SmartscopeAI/smartscopeAI"]
+	path = SmartscopeAI/smartscopeAI
+	url = https://gitlab.cs.duke.edu/bartesaghilab/smartscopeAI.git
+	branch = pytorch312
