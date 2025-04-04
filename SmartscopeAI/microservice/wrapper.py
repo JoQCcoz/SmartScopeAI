@@ -13,7 +13,7 @@ from ..smartscopeAI.detect_holes import detect_holes_yolo #, detect_and_classify
 
 logger = logging.getLogger(__name__)
 
-WEIGHT_DIR = os.path.join(os.getenv("TEMPLATE_FILES", "/mnt/smartscope/jo-dev/Template_files"), 'weights')
+WEIGHT_DIR = os.path.join(os.getenv("TEMPLATE_FILES", "template_files"), 'weights')
 IS_CUDA = False if eval(os.getenv('FORCE_CPU','False')) else torch.cuda.is_available() 
 
 
